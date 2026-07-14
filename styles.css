@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+
+.black {
+    z-index: 4;
+    background-image: url(lol.png);
+    background-repeat: repeat;
+    position: fixed;
+    inset: 0;
+}
+
+
+h1 {
+    z-index: 1;
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#fart {
+    z-index: 2;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.centered {
+    cursor: pointer;
+    z-index: 8;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Fast bouncing text boxes */
+.popup {
+
+    position: fixed;
+
+    width: 250px;
+    height: 80px;
+
+    background: black;
+    color: white;
+
+    border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+    z-index: 20;
+}
