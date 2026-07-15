@@ -20,11 +20,11 @@
 
 <footer id="contact" class="footer">
     For questions or concerns, please email
+    <br>
     <a href="mailto:iskscratmango@proton.me">
         iskscratmango@proton.me
     </a>
 </footer>
-
 
 <video id="fart" preload src="thisverseisacurse.mp4"></video>
 
@@ -35,23 +35,18 @@
 
 function startExperience() {
 
-    // Remove loading screen elements
     document.getElementById("poo").remove();
     document.getElementById("poo2").remove();
     document.getElementById("contact").remove();
 
 
-    // Fullscreen after click
     if (document.documentElement.requestFullscreen) {
         document.documentElement.requestFullscreen();
     }
 
 
-    // Play video once
     document.getElementById("fart").play();
 
-
-    // Start bouncing messages
     createPopups();
 }
 
