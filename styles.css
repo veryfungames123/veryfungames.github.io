@@ -77,3 +77,24 @@ h1 {
 
     z-index: 20;
 }
+
+.footer {
+    position: fixed;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+
+    color: white;
+    font-size: 14px;
+
+    z-index: 30;
+}
+
+.footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #cccccc;
+}
