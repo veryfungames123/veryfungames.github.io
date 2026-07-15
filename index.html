@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THIS VERSE IS A CURSE!!!</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,50 +10,67 @@
 
 <div id="poo" class="black"></div>
 
-<img id="poo2"
-     src="enter.png"
-     class="centered"
-     onclick="startExperience()"
-     alt="Enter">
+<img 
+    id="poo2"
+    src="enter.png"
+    class="centered"
+    onclick="startExperience()"
+    alt="Enter"
+>
+
+<footer id="contact" class="footer">
+    For questions or concerns, please email
+    <a href="mailto:iskscratmango@proton.me">
+        iskscratmango@proton.me
+    </a>
+</footer>
+
 
 <video id="fart" preload src="thisverseisacurse.mp4"></video>
 
 <div id="popup-container"></div>
 
-<footer class="footer">
-    For questions or concerns, please email
-    <a href="mailto:iskscratmango@proton.me">iskscratmango@proton.me</a>
-</footer>
 
 <script>
 
 function startExperience() {
 
+    // Remove loading screen elements
     document.getElementById("poo").remove();
     document.getElementById("poo2").remove();
+    document.getElementById("contact").remove();
 
+
+    // Fullscreen after click
     if (document.documentElement.requestFullscreen) {
         document.documentElement.requestFullscreen();
     }
 
-    const video = document.getElementById("fart");
-    video.play();
 
+    // Play video once
+    document.getElementById("fart").play();
+
+
+    // Start bouncing messages
     createPopups();
 }
+
 
 function createPopups() {
 
     const container = document.getElementById("popup-container");
-    const popups = [];
+    let popups = [];
+
 
     for (let i = 0; i < 5; i++) {
 
-        const popup = document.createElement("div");
+        let popup = document.createElement("div");
+
         popup.className = "popup";
-        popup.textContent = "THIS VERSE IS A CURSE!!!";
+        popup.innerText = "THIS VERSE IS A CURSE!!!";
 
         container.appendChild(popup);
+
 
         popups.push({
             element: popup,
@@ -66,27 +81,35 @@ function createPopups() {
         });
     }
 
-    function animate() {
+
+    function move() {
 
         popups.forEach(p => {
 
             p.x += p.dx;
             p.y += p.dy;
 
-            if (p.x <= 0 || p.x >= window.innerWidth - 260)
-                p.dx *= -1;
 
-            if (p.y <= 0 || p.y >= window.innerHeight - 90)
+            if (p.x <= 0 || p.x >= window.innerWidth - 260) {
+                p.dx *= -1;
+            }
+
+            if (p.y <= 0 || p.y >= window.innerHeight - 90) {
                 p.dy *= -1;
+            }
+
 
             p.element.style.left = p.x + "px";
             p.element.style.top = p.y + "px";
+
         });
 
-        requestAnimationFrame(animate);
+
+        requestAnimationFrame(move);
     }
 
-    animate();
+
+    move();
 }
 
 </script>
