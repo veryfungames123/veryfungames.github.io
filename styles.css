@@ -1,65 +1,47 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
-    background-color: black;
     overflow: hidden;
+    background: black;
+    font-family: Arial, sans-serif;
 }
-
 
 .black {
-    z-index: 4;
-    background-image: url(lol.png);
-    background-repeat: repeat;
     position: fixed;
     inset: 0;
+    background: black url("lol.png") repeat;
+    z-index: 4;
 }
-
-
-h1 {
-    z-index: 1;
-    background-color: black;
-    color: white;
-    text-align: center;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 #fart {
-    z-index: 2;
     position: fixed;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 2;
 }
 
-
 .centered {
-    cursor: pointer;
-    z-index: 8;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
 }
 
-
-/* Fast bouncing text boxes */
 .popup {
-
     position: fixed;
-
-    width: 250px;
-    height: 80px;
+    width: 260px;
+    height: 90px;
 
     background: black;
     color: white;
@@ -67,10 +49,9 @@ h1 {
     border: 2px solid white;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    font-family: Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
