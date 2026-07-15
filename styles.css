@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 html, body {
     width: 100%;
     height: 100%;
@@ -50,8 +49,9 @@ html, body {
 }
 
 
-/* Email on loading screen */
+/* Email box on loading screen */
 .footer {
+
     position: fixed;
 
     bottom: 20px;
@@ -59,34 +59,36 @@ html, body {
 
     transform: translateX(-50%);
 
-    color: black;
     background: white;
 
-    padding: 8px 14px;
+    color: black;
+
+    padding: 10px 15px;
 
     border-radius: 5px;
 
     font-family: Arial, sans-serif;
+
     font-size: 15px;
 
     text-align: center;
 
-    z-index: 100;
+    z-index: 9999;
+
 }
 
 
 .footer a {
+
     color: black;
+
     text-decoration: underline;
+
 }
 
 
-.footer a:hover {
-    color: #555555;
-}
+/* Bouncing messages */
 
-
-/* Bouncing text */
 .popup {
 
     position: fixed;
@@ -95,17 +97,23 @@ html, body {
     height: 90px;
 
     background: black;
+
     color: white;
 
     border: 2px solid white;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     font-family: Arial, sans-serif;
+
     font-size: 18px;
+
     font-weight: bold;
+
     text-align: center;
 
     z-index: 20;
