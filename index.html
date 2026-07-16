@@ -44,7 +44,6 @@ function startExperience() {
     document.getElementById("poo").remove();
     document.getElementById("poo2").remove();
     document.getElementById("contact").remove();
-    document.getElementById("credits").remove();
 
 
     if (document.documentElement.requestFullscreen) {
@@ -53,6 +52,13 @@ function startExperience() {
 
 
     document.getElementById("fart").play();
+
+
+    // Keep credit visible for 5 seconds
+    setTimeout(() => {
+        document.getElementById("credits").style.display = "none";
+    }, 5000);
+
 
     createPopups();
 }
@@ -95,6 +101,7 @@ function createPopups() {
             if (p.x <= 0 || p.x >= window.innerWidth - 260) {
                 p.dx *= -1;
             }
+
 
             if (p.y <= 0 || p.y >= window.innerHeight - 90) {
                 p.dy *= -1;
